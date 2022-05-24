@@ -1,0 +1,5 @@
+<div>
+  <h2>Please, choose the scan root:</h2>
+  <input id="path" [(ngModel)]="path" placeholder="File path">
+  <button [disabled]="filesService.isScanning" (click)="scanPath(path)">Scan</button>
+</div>

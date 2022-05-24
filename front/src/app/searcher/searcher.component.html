@@ -1,0 +1,20 @@
+<div>
+  <tr>
+    <td>
+      <div>
+        <h2>Please, write the part of the path to look for:</h2>
+        <input id="path-part" [(ngModel)]="pathPart" placeholder="Path piece">
+        <button [disabled]="filesService.isScanning" (click)="searchPathPart(pathPart)">Search</button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="align: top" *ngFor="let item of foundPaths">
+        <ul>
+          <li>{{item}}</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</div>
